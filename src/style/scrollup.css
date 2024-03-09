@@ -33,6 +33,6 @@
 
     .scroll__up {
         right: 1rem;
-        z-index: 9999;
+        z-index: 9;
     }
 }
