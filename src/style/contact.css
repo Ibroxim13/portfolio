@@ -1,0 +1,116 @@
+.contact__container {
+    grid-template-columns: repeat(2, 48.7%);
+}
+
+.social__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mb-3);
+}
+
+.social__link {
+    display: flex;
+    align-items: center;
+    gap: var(--mb-0-75);
+    width: 150px;
+}
+
+.social__link i {
+    font-size: var(--h2-font-size);
+}
+
+.social__link span {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    transition: .1s ease;
+}
+
+.social__link:hover span {
+    font-weight: var(--font-semi-bold);
+}
+
+.social__link:first-child i {
+    color: #40add9;
+}
+
+.social__link:last-child i {
+    color: blue;
+}
+
+.contact__form form {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: var(--mb-1-5);
+}
+
+.PhoneInput {
+    border: 1px solid var(--title-color);
+    padding: 0 var(--mb-0-75);
+    border-radius: var(--mb-0-5);
+    width: 100%;
+    background-color: var(--container-color);
+}
+
+.PhoneInput input {
+    border: 0 !important;
+}
+
+.contact__form form input,
+.contact__form form textarea {
+    border: 1px solid var(--title-color);
+    outline: 0;
+    height: 55px;
+    padding: 0 var(--mb-0-75);
+    resize: none;
+    border-radius: var(--mb-0-5);
+    color: var(--title-color);
+    width: 100%;
+}
+
+.contact__form form textarea {
+    height: 120px;
+    padding-top: 10px;
+}
+
+.contact__form form input:focus:not(:nth-child(2)),
+.contact__form form textarea:focus {
+    box-shadow: 0 0 3px #9c9a9a;
+}
+
+.PhoneInput:focus-within {
+    box-shadow: 0 0 3px #9c9a9a;
+}
+
+@media screen and (max-width:625px) {
+    .contact__container {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .social__links {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .social__links {
+        display: grid;
+        row-gap: var(--mb-1);
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .contact__form form input,
+    .contact__form form textarea {
+        height: 45px;
+    }
+
+    .contact__form form textarea {
+        height: 80px;
+    }
+
+    .contact__form form button {
+        padding: 12px 22px;
+    }
+}

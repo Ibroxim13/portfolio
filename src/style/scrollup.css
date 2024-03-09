@@ -1,0 +1,38 @@
+.scroll__up {
+    position: fixed;
+    bottom: -20%;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    background-color: var(--title-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.scroll__up:hover {
+    background-color: var(--title-color-dark);
+}
+
+.scroll__up a i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.show__scroll__up {
+    bottom: 2rem;
+}
+
+@media screen and (max-width:768px) {
+    .show__scroll__up {
+        bottom: 3.2rem;
+    }
+
+    .scroll__up {
+        right: 1rem;
+        z-index: 9999;
+    }
+}

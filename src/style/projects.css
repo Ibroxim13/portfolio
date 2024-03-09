@@ -1,0 +1,116 @@
+.projects__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project__box {
+    padding: var(--mb-1-5);
+    background-color: var(--container-color);
+    border-radius: var(--mb-1-5);
+    display: flex;
+    gap: var(--mb-1-5);
+    box-shadow: 0 0 10px #e6e5e5;
+    transition: .3s ease;
+}
+
+.project__box:hover {
+    box-shadow: none;
+}
+
+.project__img {
+    width: 65%;
+    overflow: hidden;
+}
+
+.project__img img {
+    width: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.project__img img:hover {
+    transform: scale(1.05);
+}
+
+.project__details {
+    width: 35%;
+}
+
+.project__details h3 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-0-5);
+}
+
+.project__details p span {
+    font-weight: var(--font-semi-bold);
+    font-size: var(--small-font-size);
+}
+
+.project__details p {
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.project__technologies {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-weight: var(--font-semi-bold);
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.project__technologies span {
+    padding: 4px 10px;
+    border: 1px solid var(--title-color);
+    border-radius: var(--h3-font-size);
+    color: var(--title-color);
+    cursor: pointer;
+    transition: .3s;
+    font-size: var(--smaller-font-size);
+}
+
+.project__technologies span:hover {
+    background-color: var(--title-color);
+    color: var(--body-color);
+}
+
+.project__links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: var(--mb-1);
+}
+
+.project__links i {
+    font-size: var(--h3-font-size);
+    cursor: pointer;
+    color: var(--title-color);
+}
+
+/* Breakpoints */
+/* For medium devices */
+@media screen and (max-width: 740px) {
+    .project__box {
+        flex-direction: column;
+    }
+
+    .project__img,
+    .project__details {
+        width: 100%;
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 375px) {
+    .project__box {
+        gap: var(--mb-1);
+    }
+
+    .project__details h3 {
+        font-size: var(--normal-font-size);
+    }
+}
